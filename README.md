@@ -21,7 +21,7 @@ This is a mobile-first designed and responsive personal portfolio web page.
 
 ### Links
 
-https://simonemarketti.github.io/cosmo-junkies
+https://simonemarketti.github.io/cosmo-junkie
 
 ### Notes
 
