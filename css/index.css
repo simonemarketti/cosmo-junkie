@@ -1,0 +1,562 @@
+/* Import Partials */
+/* scss reset */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* variables */
+/* fonts */
+@font-face {
+  font-family: "Rubik Regular";
+  src: url("../assets/fonts/Rubik-Regular.ttf");
+}
+h1,
+h2,
+h3,
+h4 {
+  color: #dddbff;
+  font-weight: normal;
+  line-height: 1.4em;
+}
+
+p,
+a,
+li {
+  color: #9893d8;
+  line-height: 1.4em;
+  font-size: 1em;
+}
+
+h1,
+h3 {
+  font-size: 1.2em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+.leading {
+  font-size: 1.1em;
+}
+
+/* breakpoints */
+/* --- BODY --- */
+body {
+  background: #0a0b5b;
+  font-family: "Rubik Regular";
+}
+@media (min-width: ) {
+  body {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+/* --- BUTTONS --- */
+.button {
+  background: none;
+  border: 2px solid #ffc636;
+  color: #ffc636;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  font-size: 1em;
+}
+.button:hover {
+  color: #222;
+  background: #ffc636;
+}
+
+/* --- GRID --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  box-sizing: border-box;
+}
+@media (min-width: ) {
+  .grid {
+    max-width: 1060px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* --- NAV SECTION --- */
+.site-nav {
+  margin: 0 20px;
+}
+@media (min-width: ) {
+  .site-nav {
+    padding: 0 20px;
+  }
+}
+.site-nav h1 {
+  grid-column: 1/4;
+  grid-row: 1;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #ffc636;
+  display: inline-block;
+}
+@media (min-width: ) {
+  .site-nav h1 {
+    grid-column: 1/3;
+  }
+}
+.site-nav ul {
+  display: none;
+}
+@media (min-width: ) {
+  .site-nav ul {
+    display: flex;
+    grid-column: 6/9;
+    justify-content: flex-end;
+    align-self: center;
+  }
+}
+@media (min-width: ) {
+  .site-nav ul li {
+    margin-left: 20px;
+  }
+}
+
+/* --- WELCOME SECTION --- */
+#welcome {
+  padding: 0 20px 20px 20px;
+}
+@media (min-width: ) {
+  #welcome {
+    padding-bottom: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  #welcome {
+    padding: 90px 10px;
+  }
+}
+#welcome .welcome-text {
+  grid-column: 1/6;
+}
+@media (min-width: 620px) {
+  #welcome .welcome-text {
+    grid-column: 1/5;
+  }
+}
+@media (min-width: ) {
+  #welcome .welcome-text {
+    grid-column: 1/5;
+    align-self: center;
+  }
+}
+@media (min-width: ) {
+  #welcome .welcome-text .leading {
+    margin: 20px 0;
+  }
+}
+@media (min-width: 1200px) {
+  #welcome .welcome-text .leading {
+    margin: 20px 0;
+  }
+}
+#welcome .welcome-text a {
+  margin: 20px 0;
+}
+#welcome .welcome-img {
+  grid-column: 6/9;
+  overflow-x: hidden;
+}
+@media (min-width: 620px) {
+  #welcome .welcome-img {
+    grid-column: 5/9;
+  }
+}
+#welcome .welcome-img img {
+  width: 200%;
+}
+@media (min-width: 620px) {
+  #welcome .welcome-img img {
+    width: 100%;
+  }
+}
+
+/* --- PORTFOLIO SECTION --- */
+#portfolio {
+  background: url(../assets/square_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 30px 20px;
+}
+@media (min-width: 1200px) {
+  #portfolio {
+    padding: 90px 10px;
+  }
+}
+#portfolio h3 {
+  margin-bottom: 0;
+  text-align: center;
+}
+#portfolio .projects {
+  margin: 20px 0;
+}
+@media (min-width: 620px) {
+  #portfolio .projects {
+    margin-top: 40px;
+  }
+}
+#portfolio .projects a {
+  grid-column: 1/9;
+  display: flex;
+  margin: 20px 0;
+}
+@media (min-width: 620px) {
+  #portfolio .projects a {
+    grid-column: span 4;
+    display: block;
+    margin: 20px 0;
+  }
+}
+#portfolio .projects a * {
+  margin: 0 20px;
+  max-width: 40%;
+  align-self: center;
+}
+@media (min-width: 620px) {
+  #portfolio .projects a * {
+    margin: 10px;
+    max-width: 60%;
+    margin: 10px 20%;
+  }
+}
+@media (min-width: ) {
+  #portfolio .projects a * {
+    max-width: 80%;
+    margin: 30px 10%;
+  }
+}
+@media (min-width: 1200px) {
+  #portfolio .projects a * {
+    max-width: 100%;
+    margin: 30px 0%;
+  }
+}
+@media (min-width: ) {
+  #portfolio .projects a:nth-child(1) {
+    grid-column: 2/4;
+  }
+}
+@media (min-width: 1200px) {
+  #portfolio .projects a:nth-child(1) {
+    grid-column: 1/3;
+  }
+}
+@media (min-width: ) {
+  #portfolio .projects a:nth-child(2) {
+    grid-column: 4/6;
+    padding-top: 140px;
+  }
+}
+@media (min-width: 1200px) {
+  #portfolio .projects a:nth-child(2) {
+    grid-column: 4/6;
+    padding-top: 140px;
+  }
+}
+@media (min-width: 620px) {
+  #portfolio .projects a:nth-child(3) {
+    grid-column: 3/7;
+  }
+}
+@media (min-width: ) {
+  #portfolio .projects a:nth-child(3) {
+    grid-column: 6/8;
+  }
+}
+@media (min-width: 1200px) {
+  #portfolio .projects a:nth-child(3) {
+    grid-column: 7/9;
+  }
+}
+#portfolio .projects a h4 {
+  color: #9994f7;
+}
+@media (min-width: 620px) {
+  #portfolio .projects a h4 {
+    text-align: center;
+  }
+}
+
+/* --- SKILLS SECTION --- */
+#skills {
+  padding: 30px 20px;
+  background: #07083e;
+}
+@media (min-width: 620px) {
+  #skills {
+    padding: 30px 100px;
+  }
+}
+@media (min-width: ) {
+  #skills {
+    padding: 30px 20px;
+  }
+}
+@media (min-width: 1200px) {
+  #skills {
+    padding: 90px 10px;
+  }
+}
+#skills h3 {
+  text-align: center;
+}
+#skills ul {
+  margin: 40px 0;
+}
+@media (min-width: ) {
+  #skills ul {
+    margin: 40px auto;
+  }
+}
+#skills ul li {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  grid-column: span 4;
+  text-align: center;
+}
+@media (min-width: ) {
+  #skills ul li {
+    grid-column: span 2;
+  }
+}
+#skills ul img {
+  height: 80px;
+  margin: 10px auto;
+}
+#skills p {
+  text-align: center;
+  margin: 0 20px;
+}
+@media (min-width: ) {
+  #skills p {
+    max-width: 600px;
+    margin: 40px auto;
+  }
+}
+
+/* --- CONTACT SECTION */
+#contact {
+  padding: 30px 20px;
+  background: #080936;
+}
+@media (min-width: 1200px) {
+  #contact {
+    padding: 90px 10px;
+  }
+}
+#contact h3,
+#contact p {
+  margin-bottom: 0;
+  text-align: center;
+}
+#contact form {
+  width: 80%;
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+#contact form input {
+  width: 100%;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 2px solid #9893d8;
+  color: #f2f2f2;
+  font-size: 1em;
+}
+#contact form textarea {
+  width: 100%;
+  height: 200px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 2px solid #9893d8;
+  color: #f2f2f2;
+  font-size: 1em;
+}
+#contact form .button {
+  margin-top: 10px;
+}
+
+/* --- FOOTER --- */
+footer {
+  padding: 30px 20px;
+  background-color: #14153d;
+  background-image: url(../assets/footer_image.png);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+@media (min-width: 620px) {
+  footer {
+    background-size: 20%;
+  }
+}
+@media (min-width: ) {
+  footer {
+    background-size: 20%;
+    padding: 40px 20px;
+  }
+}
+@media (min-width: 1200px) {
+  footer {
+    padding: 80px 10px;
+    background-size: 30%;
+  }
+}
+footer .copyright {
+  grid-column: 1/3;
+  font-size: 0.8em;
+}
+@media (min-width: 1200px) {
+  footer .copyright {
+    grid-column: 1/4;
+  }
+}
+footer .social {
+  grid-column: 7/9;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (min-width: 1200px) {
+  footer .social {
+    grid-column: 6/9;
+  }
+}
+footer .social li {
+  margin: 0 6px;
+}
+footer .social li img {
+  width: 20px;
+}
+@media (min-width: 1200px) {
+  footer .social li img {
+    width: 30px;
+  }
+}
