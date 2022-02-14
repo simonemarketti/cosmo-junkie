@@ -6,13 +6,13 @@ This is a mobile-first designed and responsive personal portfolio web page.
 
 ### Concepts
 
-- Mobile first design
+- Mobile first design with CSS grid
 - Responsive webpage at different breakpoints (mobile, tablet, laptop and desktop)
 
 ### Languanges and tools
 
 - HTML
-- CSS
+- CSS (grid)
 - JAVASCRIPT
 - SASS
 - GIT
