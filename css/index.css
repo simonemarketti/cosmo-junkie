@@ -208,7 +208,6 @@ body {
 }
 .site-nav h1 {
   grid-column: 1/4;
-  grid-row: 1;
   padding-bottom: 10px;
   border-bottom: 3px solid #ffc636;
   display: inline-block;
