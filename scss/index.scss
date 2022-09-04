@@ -11,7 +11,7 @@
 /* --- BODY --- */
 body {
   background: $dark-blue;
-  font-family: "Rubik Regular";
+  font-family: "Rubik Regular", sans-serif;
   @include l {
     font-size: 18px;
   }
@@ -129,10 +129,8 @@ body {
 
 /* --- PORTFOLIO SECTION --- */
 #portfolio {
-  background: url(../assets/square_bg.png);
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
+  background: url(../assets/square_bg.png) no-repeat bottom;
   padding: 30px 20px;
   @include xl {
     padding: 90px 10px;
@@ -160,7 +158,6 @@ body {
         max-width: 40%;
         align-self: center;
         @include m {
-          margin: 10px;
           max-width: 60%;
           margin: 10px 20%;
         }
@@ -170,7 +167,7 @@ body {
         }
         @include xl {
           max-width: 100%;
-          margin: 30px 0%;
+          margin: 30px 0;
         }
       }
       &:nth-child(1) {
